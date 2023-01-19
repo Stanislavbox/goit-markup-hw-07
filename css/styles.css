@@ -233,6 +233,7 @@ img{
       padding-bottom: 112px;
       margin-left: auto;
       margin-right: auto;
+
       background-color: #2e2f42B3;
       background-image: linear-gradient( to right, #2e2f42B3, #2e2f42B3 ),
       url("../images/bg-hero-mob@1x.jpg");
@@ -241,48 +242,47 @@ img{
       background-size: cover;
       text-align: center;
 }
-@media screen and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero {
-      background-image: linear-gradient( to right, #2e2f42B3, #2e2f42B3 ),
-      url("../images/bg-hero-mob@2x.jpg");
-  }
+@media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2),
+      screen and (max-width: 767.98px) and (min-resolution: 192dpi),
+      screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
+      .hero {
+            background-image: linear-gradient( to right, #2e2f42B3, #2e2f42B3 ),
+            url("../images/bg-hero-mob@2x.jpg");
+      }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .hero {
       background-image: linear-gradient( to right, #2e2f42B3, #2e2f42B3 ),
       url("../images/bg-hero-tab@1x.jpg");
   }
 }
 
-@media screen and (min-width: 480px) and
-(min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
       .hero {
           background-image: linear-gradient( to right, #2e2f42B3, #2e2f42B3 ),
           url("../images/bg-hero-tab@2x.jpg");
       }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
       .hero {
           background-image: linear-gradient( to right, #2e2f42B3, #2e2f42B3 ),
           url("../images/bg-hero-desk@1x.jpg");
       }
 }
     
-@media screen and (min-width: 768px) and
-    (min-device-pixel-ratio: 2),
-          (min-resolution: 192dpi),
-          (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
           .hero {
               background-image: linear-gradient( to right, #2e2f42B3, #2e2f42B3 ),
               url("../images/bg-hero-desk@2x.jpg");
           }
 }
+
 
 @media screen and (min-width: 1200px) {
       .hero {
@@ -667,11 +667,29 @@ img{
       .customers-item:nth-last-child(-n+3) {
             margin-bottom: 0px;
       }
+
+      .customers-item {
+            margin-left: 24px;
+      }
+}
+@media screen and (min-width: 768px){
+      .customers-list {
+            justify-content: center;
+           margin-left: -24px;
+      }
 }
 
 @media screen and (min-width: 1200px){
       .customers-list .customers-item {
            margin: 0 0;
+           margin-left: 24px;
+      }
+}
+
+@media screen and (min-width: 768px){
+      .customers-list {
+            justify-content: center;
+           margin-left: -26px;
       }
 }
 
@@ -1110,11 +1128,11 @@ img{
       transition: visibility var(--animation), opacity var(--animation);
 }
 
-/* @media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (orientation: portrait) {
       .backdrop {
         overflow: auto;
-      } */
-
+      }
+}
 .backdrop.is-hidden{
       visibility: hidden;
       opacity: 0;
@@ -1140,6 +1158,20 @@ img{
       border-radius: 4px;
 
       transition: opasity var(--animation), transform var(--animation);
+}
+
+@media screen and (orientation: landscape){
+      .modal {
+      top: 2%;
+      transform: translateX(-50%);
+      }
+}
+
+@media screen and (orientation: portrait){
+      .modal {
+      top: 2%;
+      transform: translateX(-50%);
+      }
 }
 
 @media screen and (min-width: 480px){
