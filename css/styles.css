@@ -1144,7 +1144,7 @@ img{
       top: 50%;
       left: 50%;
 
-      width: 392px;
+      width: 300px;
       transform: translate(-50%, -50%);
       opacity: 1;
 
@@ -1176,6 +1176,11 @@ img{
       }
 }
 
+@media screen and (min-width: 428px){
+      .modal{
+            width: 392px;
+      }
+}
 
 @media screen and (min-width: 768px){
       .modal{
@@ -1337,6 +1342,15 @@ img{
 
 .modal-form-agreement>.modal-form-text{
       margin: 0;
+}
+.modal-form-agreement>.modal-form-text{
+      margin-left: 14px;
+}
+
+@media screen and (min-width: 428px){
+      .modal-form-agreement>.modal-form-text{
+            margin: 0;
+      }
 }
 
 .modal-form-checkbox {
